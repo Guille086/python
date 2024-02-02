@@ -1,0 +1,23 @@
+{% load static %}
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}"/>
+        <link rel="stylesheet" href="{% static 'css/style.css'%}"/>
+    </head>
+    <body>
+        <form class="row g-3">
+            <div class="col-auto">
+                <label for="usuario" class="visually-hidden">Usuario</label>
+                <input type="text" class="form-control" id="usuario" placeholder="Usuario">
+            </div>
+            <div class="col-auto">
+                <label for="password" class="visually-hidden">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Confirmar</button>
+            </div>
+        </form>
+    </body>
+</html>
