@@ -1,5 +1,5 @@
 """
-URL configuration for sistema3 project.
+URL configuration for sistema2 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.urls import include
+from sistema2.views import consultar,plantilla_index,plantilla_login
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('ListaReproduccion.urls'))
+    path('ver/<int:num>', consultar),
+    path('index/', plantilla_index),
+    path('login/', plantilla_login),
 ]
